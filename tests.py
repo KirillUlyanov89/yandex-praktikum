@@ -25,7 +25,7 @@ class TestBooksCollector:
     def test_add_new_book_duplicate(self):
         collector = BooksCollector()
         collector.add_new_book('Дон Кихот')
-        collector.add_new_book('Дон Кихот')  # Должен игнорироваться
+        collector.add_new_book('Дон Кихот') 
         assert len(collector.get_books_genre()) == 1
 
     def test_set_book_genre(self):
@@ -70,7 +70,7 @@ class TestBooksCollector:
         collector = BooksCollector()
         collector.add_new_book('Сияние')
         collector.add_book_in_favorites('Сияние')
-        collector.add_book_in_favorites('Сияние')  # Должен игнорироваться
+        collector.add_book_in_favorites('Сияние')
         assert len(collector.get_list_of_favorites_books()) == 1
 
     def test_delete_book_from_favorites(self):
